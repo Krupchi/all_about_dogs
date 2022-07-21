@@ -9,7 +9,7 @@ import (
 
 func main() {
 	r := mux.NewRouter()
-	http.HandleFunc("/hello", handler).Methods("GET")
+	r.HandleFunc("/hello", handler).Methods("GET")
 	http.ListenAndServe(":8080", r)
 }
 func handler(w http.ResponseWriter, r *http.Request) {
