@@ -15,7 +15,7 @@ func TestHandler(t *testing.T) {
 
 	recorder := httptest.NewRecorder()
 
-	hf := nttp.HandleFunc(handler)
+	hf := http.HandlerFunc(handler)
 
 	hf.ServeHTTP(recorder, req)
 
